@@ -1,0 +1,18 @@
+# npm packages and generated files
+node_modules
+dist
+
+# local configuration files
+.env*
+
+# misc
+**/*.DS_Store
+**/*.AppleDouble
+
+# other project related files
+*.Dockerfile
+.dockerignore
+.git
+.gitignore
+.prettierrc
+tsconfig.development.json

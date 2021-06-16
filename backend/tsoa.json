@@ -1,0 +1,33 @@
+{
+  "entryFile": "./src/index.ts",
+  "controllerPathGlobs": [
+    "./src/apis/**/*.router.ts"
+  ],
+  "noImplicitAdditionalProperties": "silently-remove-extras",
+  "spec": {
+    "specVersion": 3,
+    "host": "localhost:3000",
+    "basePath": "/api",
+    "outputDirectory": "./src/apis/",
+    "yaml": true,
+    "schemes": [
+      "http",
+      "https"
+    ],
+    "securityDefinitions": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "tags": []
+  },
+  "routes": {
+    "middleware": "express",
+    "basePath": "/api",
+    "routesDir": "./src/apis",
+    "iocModule": "./src/common/ioc.ts",
+    "authenticationModule": "./src/middlewares/authentication.ts"
+  }
+}

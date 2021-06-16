@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig",
+    "compilerOptions": {
+      "sourceMap": false,
+      "removeComments": true
+    },
+    "exclude": [
+      "**/test","**/routes/openApi","**/ci","**/node_modules","**/dist"
+    ]
+}

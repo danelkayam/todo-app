@@ -1,0 +1,23 @@
+.ItemsPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ItemsPage__bar-title {
+    margin-top: 16px;
+}
+
+.ItemsPage__bar-avatar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    user-select: none;
+    background-color: #87d068;
+}
+
+.AuthPage__items-pane {
+    max-width: 300px;
+    margin-top: 8px;
+}

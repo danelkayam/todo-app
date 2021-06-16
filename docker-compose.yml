@@ -1,0 +1,43 @@
+version: "3.8"
+services:
+  client:
+    container_name: frontend
+    restart: always
+    build: ./client
+    depends_on:
+      - backend
+    networks:
+      - frontend-backend
+    ports:
+      - 80:80
+  backend:
+    container_name: backend
+    restart: always
+    build: ./backend
+    environment:
+      - DATABASE_URI=mongodb://mongo:27017/todos
+      - SERVICE_ENABLE_SWAGGER=true
+      - AUTH_JWT_SECRET=ZYsASrsVze3yNVnG37ej8ZEr9z9rT3VC4FCKxJHNnR6XAtXSwnJYN2J3Vj46MeAU
+      - AUTH_JWT_EXPIRES_IN=86400
+      - AUTH_JWT_AUDIENCE=todolistts
+      - AUTH_JWT_ISSUER=todolistts
+    depends_on:
+      - mongo
+    networks:
+      - backend-database
+      - frontend-backend
+    expose:
+      - 3000
+  mongo:
+    container_name: mongo
+    restart: always
+    image: mongo:latest
+    volumes:
+      - ./data:/data/db
+    networks:
+      - backend-database
+    expose:
+      - 27017
+networks:
+  backend-database:
+  frontend-backend:

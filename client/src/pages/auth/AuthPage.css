@@ -1,0 +1,20 @@
+.AuthPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AuthPage__title {
+    margin-top: 16px;
+}
+
+.AuthPage__auth-pane {
+    max-width: 300px;
+    margin-top: 8px;
+}
+
+.AuthPage__switch-mode-button {
+    width: 100%;
+    margin-top: 8px;
+}

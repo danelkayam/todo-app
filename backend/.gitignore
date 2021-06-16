@@ -1,0 +1,28 @@
+# npm packages and generated files
+**/node_modules
+.npmrc
+**/dist/
+**/apis/swagger.yaml
+**/apis/routes.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+**/.terraform
+**/terraform.log
+
+# local configuration files
+**/local.yaml
+**/local.yml
+.env*
+
+# webStorm configurations
+.idea/
+*.iml
+modules.xml
+*.ipr
+.vscode
+
+# misc
+.DS_Store
+.AppleDouble
